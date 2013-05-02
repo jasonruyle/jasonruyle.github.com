@@ -1,0 +1,64 @@
+@import url("http://fonts.googleapis.com/css?family=Exo:900");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(30, 40, 50);
+}
+
+div {
+  position: relative;
+  height: 100%;
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, .3), transparent)
+  , linear-gradient(rgba(255, 255, 255, .5) 1px, transparent 1px)
+  , linear-gradient(90deg, rgba(255, 255, 255, .5) 1px, transparent 1px)
+  , linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px)
+  , linear-gradient(90deg, rgba(255, 255, 255, .3) 1px, transparent 1px)
+  ,   rgb(0, 100, 150);
+  background-size: 100%, 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -1px -1px;
+    border: 10px solid rgb(225, 225, 225);
+    box-shadow:
+    inset 0 0 10em rgba(0, 0, 0, .5)
+    , 0 0 1em rgba(0, 0, 0, .8);
+  transition: 900ms;
+}
+
+body:hover div {
+  transform: perspective(100vw) rotateX(3deg);
+}
+
+div span {
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1em;
+  margin: -.5em 0 0 0;
+  font: 5em/1em Exo;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 25, 50, .8);
+  color: rgb(255, 255, 255);
+  transition: 900ms;
+}
+
+body:hover div span {
+  text-shadow:
+    0 1px 0 #999
+  , 0 2px 0 #888
+  , 0 3px 0 #777
+  , 0 4px 0 #666
+  , 0 5px 0 #555
+  , 0 6px 0 #444
+  , 0 7px 0 #333
+  , 0 10px 1px rgba(0, 25, 50, .8);
+  color: rgba(255, 255, 255, .8);
+}
